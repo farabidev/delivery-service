@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "8cfd051d-9c3f-4e3f-958c-fa8d6b618d74",
+		"name": "Delivery Service",
+		"description": "Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Send Personal Delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Johnny Bravo\",\r\n        \"address\": \"56 Pitt Street, 2000, Sydney\"\r\n    },\r\n    \"deliveryType\": \"personalDelivery\",\r\n    \"source\": \"web\",\r\n    \"weight\": 1500\r\n}"
+						},
+						"url": {
+							"raw": "{{APIURL}}/delivery/send",
+							"host": [
+								"{{APIURL}}"
+							],
+							"path": [
+								"delivery",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Personal Delivery Express",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Jack Ripper\",\r\n        \"address\": \"822 Anzac Parade, 2035, Maroubra\"\r\n    },\r\n    \"deliveryType\": \"personalDeliveryExpress\",\r\n    \"source\": \"email\",\r\n    \"weight\": 2000,\r\n    \"campaign\": {\r\n        \"name\": \"Christmas2018\",\r\n        \"type\": \"holiday\",\r\n        \"ad\": \"opportunity\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "{{APIURL}}/delivery/send",
+							"host": [
+								"{{APIURL}}"
+							],
+							"path": [
+								"delivery",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Enterprise Delivery",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "X-Requested-With",
+								"type": "text",
+								"value": "XMLHttpRequest"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\": {\r\n        \"name\": \"Elvis Presley\",\r\n        \"address\": \"333 George Street, 2000, Sydney\"\r\n    },\r\n    \"deliveryType\": \"enterpriseDelivery\",\r\n    \"source\": \"direct\",\r\n    \"onBehalf\": \"True Capital\",\r\n    \"enterprise\": {\r\n        \"name\": \"Bayview Motel\",\r\n        \"type\": \"PtyLtd\",\r\n        \"abn\": \"1234567890\",\r\n        \"directors\": [\r\n            {\r\n                \"name\": \"Michael Jackskon\",\r\n                \"address\": \"242 Bayview, 2434, Sydney\"\r\n            },\r\n            {\r\n                \"name\": \"Freddie Mercury\",\r\n                \"address\": \"132 Coast, 2354, Newcastle\"\r\n            }\r\n        ]\r\n    },\r\n    \"weight\": 5000\r\n}"
+						},
+						"url": {
+							"raw": "{{APIURL}}/delivery/send",
+							"host": [
+								"{{APIURL}}"
+							],
+							"path": [
+								"delivery",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
