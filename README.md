@@ -72,7 +72,7 @@ Below are summarise of steps on how the delivery works:
     * Enterprise Delivery uses an additional validator to check the ABN (`Validator/AbnValidator`). 
     For demo purposes, use `1234567890` for success result. 
     * Process Delivery Express uses an additional service to send an email campaign.
-    The app has 2 email services `MailChimp` and `SendGrid`.
+    The app has 2 email services `MailChimp` and `SendGrid`. The email service settings are available in `app/settings.php`.
     For demo purposes, the default email service will be using `MailChimp` and show a success result. 
     Any other email services will be unsuccessful.
     By introducing a new property `campaign->service` in the JSON request, the app will be able to switch email service.
