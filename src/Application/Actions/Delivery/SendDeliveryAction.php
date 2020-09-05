@@ -36,10 +36,10 @@ class SendDeliveryAction extends DeliveryAction
                     return new PersonalDeliveryExpressProcessor($data, $this->container->get('settings')['emailService']);
                 case 'enterpriseDelivery':
                     return new EnterpriseDeliveryProcessor($data);
-                default:
-                    return false;
             }
         }
+
+        return false;
     }
 }
 
