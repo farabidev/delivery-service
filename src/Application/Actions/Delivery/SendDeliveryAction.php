@@ -19,6 +19,14 @@ class SendDeliveryAction extends DeliveryAction
         return $this->respondWithData($data);
     }
 
+    private function prepareDelivery($data) {
+        $delivery = $this->getDeliveryType($data);
+        if (!$delivery){
+            return array('status' => 'Failed', 'message' => 'Unknown Delivery Type');
+        }
+        return $delivery->send();
+    }
+
     private function getDeliveryType($data) {
         if (property_exists($data, 'deliveryType') && !empty($data->deliveryType)){
             switch ($data->deliveryType) {
@@ -32,14 +40,6 @@ class SendDeliveryAction extends DeliveryAction
                     return false;
             }
         }
-    }
-
-    private function prepareDelivery($data) {
-        $delivery = $this->getDeliveryType($data);
-        if (!$delivery){
-            return array('status' => 'Failed', 'message' => 'Unknown Delivery Type');
-        }
-        return $delivery->send();
     }
 }
 

@@ -10,7 +10,7 @@ use Psr\Log\LoggerInterface;
 abstract class DeliveryAction extends Action
 {
     /**
-     * @var ContainerInterface
+     * @param ContainerInterface $container
      */
     protected $container;
     /**

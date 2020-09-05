@@ -19,6 +19,7 @@ class PersonalDeliveryExpressProcessor extends DeliveryValidator implements Deli
         $this->defaultEmailService = "mailChimp";
     }
     public function send() {
+
         $validateDeliveryData = $this->validateDeliveryData($this->data, $this->getRequiredProperties());
         if (!$validateDeliveryData['isValid']){
             return array('status' => 'Failed', 'message' => $validateDeliveryData['errorMessage']);
