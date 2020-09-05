@@ -6,7 +6,8 @@
         "rest",
         "router",
         "psr7",
-        "service"
+        "service",
+        "slim-4"
     ],
     "homepage": "http://github.com/farabidev/delivery-service",
     "authors": [

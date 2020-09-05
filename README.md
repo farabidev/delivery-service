@@ -1,4 +1,4 @@
-# Technical Test - Delivery Service
+# Delivery Service
 
 This domain service application was created in **[Slim 4](https://www.slimframework.com/)** to demonstrate the use of SOLID principles to process three types of delivery orders.
 The app follows the structure of [Slim skeleton application](https://github.com/slimphp/Slim-Skeleton) with minor changes.
@@ -61,7 +61,7 @@ Created a `Validator` folder to store any validation required to run the service
 In order to send a delivery, the application uses an endpoint `POST /delivery/send`. 
 
 To check all endpoints you need an HTTP client e.g [Postman](https://www.getpostman.com/).
-You can use the [available collections](#Delivery Service.postman_collection.json) exported from Postman or 
+You can use the [available collections](https://github.com/farabidev/delivery-service/blob/master/Delivery%20Service.postman_collection.json) exported from Postman or 
 see the [List of Endpoints](#list-of-endpoints) section.
 
 Below are summarise of steps on how the delivery works:
