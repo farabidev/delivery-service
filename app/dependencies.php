@@ -7,7 +7,6 @@ use Monolog\Logger;
 use Monolog\Processor\UidProcessor;
 use Psr\Container\ContainerInterface;
 use Psr\Log\LoggerInterface;
-use \App\Application\Interfaces\EmailServiceInterface;
 
 return function (ContainerBuilder $containerBuilder) {
     $containerBuilder->addDefinitions([
@@ -25,10 +24,5 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
-        EmailServiceInterface::class => function (ContainerInterface $c) {
-            $settings = $c->get('settings');
-            $emailServiceSettings = $settings['emailService'];
-            $emailService = new \App\Application\Processors\Delivery\PersonalDeliveryExpressProcessor($emailServiceSettings);
-        }
     ]);
 };
