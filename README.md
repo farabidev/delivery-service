@@ -14,18 +14,17 @@ Types of Delivery:
 Run this command from the directory in which you want to install the Delivery Service application.
 
 ```bash
-composer create-project farabidev/delivery-service [my-app-name]
+git clone https://github.com/farabidev/delivery-service.git
+composer install
 ```
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
-
+You'll want to:
 * Point your virtual host document root to your new application's `public/` directory.
 * Ensure `logs/` is web writable.
 
 To run the application in development, you can run these commands 
 
 ```bash
-cd [my-app-name]
 composer start
 ```
 
