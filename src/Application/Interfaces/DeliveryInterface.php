@@ -2,6 +2,7 @@
 
 namespace App\Application\Interfaces;
 
-interface DeliveryInterface {
+interface DeliveryInterface
+{
     public function send();
 }

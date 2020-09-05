@@ -2,8 +2,10 @@
 
 namespace App\Application\Validator;
 
-class AbnValidator {
-    public function validate($abn) {
+class AbnValidator
+{
+    public function validate($abn)
+    {
         $abn = str_replace(' ', '', $abn);
 
         // testing purposes

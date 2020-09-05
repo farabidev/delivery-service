@@ -5,15 +5,18 @@ namespace App\Application\Services;
 
 use App\Application\Interfaces\EmailServiceInterface;
 
-class EmailService {
+class EmailService
+{
     private $emailService;
     private $campaign;
-    public function __construct(EmailServiceInterface $emailService, $campaign) {
+    public function __construct(EmailServiceInterface $emailService, $campaign)
+    {
         $this->emailService = $emailService;
         $this->campaign = $campaign;
     }
 
-    public function send(){
+    public function send()
+    {
         return $this->emailService->connect($this->campaign);
     }
 }

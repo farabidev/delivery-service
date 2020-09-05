@@ -19,16 +19,18 @@ class SendDeliveryAction extends DeliveryAction
         return $this->respondWithData($data);
     }
 
-    private function prepareDelivery($data) {
+    private function prepareDelivery($data)
+    {
         $delivery = $this->getDeliveryType($data);
-        if (!$delivery){
+        if (!$delivery) {
             return array('status' => 'Failed', 'message' => 'Unknown Delivery Type');
         }
         return $delivery->send();
     }
 
-    private function getDeliveryType($data) {
-        if (property_exists($data, 'deliveryType') && !empty($data->deliveryType)){
+    private function getDeliveryType($data)
+    {
+        if (property_exists($data, 'deliveryType') && !empty($data->deliveryType)) {
             switch ($data->deliveryType) {
                 case 'personalDelivery':
                     return new PersonalDeliveryProcessor($data);
@@ -42,5 +44,3 @@ class SendDeliveryAction extends DeliveryAction
         return false;
     }
 }
-
-
