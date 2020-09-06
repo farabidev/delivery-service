@@ -22,7 +22,7 @@ class personalDeliveryExpressProcessorTest extends TestCase
             "campaign" => array(
                 "name" => "Christmas2018",
                 "type" => "holiday",
-                "abn" => "opportunity"
+                "ad" => "opportunity"
             ),
             "weight" => 1500
         ];
@@ -55,7 +55,7 @@ class personalDeliveryExpressProcessorTest extends TestCase
                 "service" => "unknownService",
                 "name" => "Christmas2018",
                 "type" => "holiday",
-                "abn" => "opportunity"
+                "ad" => "opportunity"
             ),
             "weight" => 1500
         ];
